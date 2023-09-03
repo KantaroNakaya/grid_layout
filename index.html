@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>20230903</title>
+    <meta name="description" content="coding">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://placehold.jp/3d4070/ffffff/150x100.png?text=%E3%83%AD%E3%82%B4" alt="">
+        </div>
+        <h1>コーディング</h1>
+        <div class="openbtn">
+            <span></span><span></span><span></span>
+        </div>
+        <nav id="g-nav">
+            <ul>
+                <li><a href="#">Top</a></li> 
+                <li><a href="#">About</a></li> 
+                <li><a href="#">Service</a></li> 
+                <li><a href="#">Contact</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="grid-corner">
+            <h2>グリッドレイアウト 横2こ/縦3こ</h2>
+            <div class="container mb30">
+                <div class="box">
+                    <p>01</p>
+                </div>
+                <div class="box">
+                    <p>02</p>
+                </div>
+                <div class="box">
+                    <p>03</p>
+                </div>
+                <div class="box">
+                    <p>04</p>
+                </div>
+                <div class="box">
+                    <p>05</p>
+                </div>
+                <div class="box">
+                    <p>06</p>
+                </div>
+            </div>
+            <h2>scssのコード</h2>
+            <div class="code-area">
+                <p>
+                    <pre>
+                        <code>
+                            .container {
+                                display: grid;
+                                grid-template-columns: 1fr 0.8fr;
+                                grid-template-rows: 1fr 1.5fr 0.8fr;
+                                .box{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 1px dotted red;
+                                    &:nth-of-type(3n){
+                                        background-color: antiquewhite;
+                                    }
+                                    &:nth-of-type(3n+1){
+                                        background-color: aqua;
+                                    }
+                                    &:nth-of-type(3n+2){
+                                        background-color: rgb(179, 178, 255);
+                                    }
+                    
+                                    p{
+                                        margin: 0px;
+                                        padding: 32px;
+                                        color:#333;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        </code>
+                    </pre>
+                </p>
+            </div>
+            <h2>グリッドレイアウト 横3こ/縦2こ</h2>
+            <div class="container-02 mb30">
+                <div class="box">
+                    <p>01</p>
+                </div>
+                <div class="box">
+                    <p>02</p>
+                </div>
+                <div class="box">
+                    <p>03</p>
+                </div>
+                <div class="box">
+                    <p>04</p>
+                </div>
+                <div class="box">
+                    <p>05</p>
+                </div>
+                <div class="box">
+                    <p>06</p>
+                </div>
+            </div>
+            <h2>scssのコード</h2>
+            <div class="code-area">
+                <p>
+                    <pre>
+                        <code>
+                            .container-02{
+                                display: grid;
+                                grid-template-columns: 0.2fr 0.8fr 0.3fr;
+                                grid-template-rows:  1.5fr 0.8fr;
+                                .box{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 1px dotted red;
+                                    &:nth-of-type(2n){
+                                        background-color: rgb(240, 255, 222);
+                                    }
+                                    &:nth-of-type(2n+1){
+                                        background-color:rgb(245, 188, 230);
+                                    }
+                                    p{
+                                        margin: 0px;
+                                        padding: 32px;
+                                        color:#333;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        </code>
+                    </pre>
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/base.js"></script>
+</body>
